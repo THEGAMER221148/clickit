@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title id="title">what does the button do?...</title>
+        <style>
+            body {
+                padding: 0%;
+                margin: 0%;
+                overflow: hidden;
+                background-color: black;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+            }
+            button {
+                position: absolute;
+                width: 50%;
+                height: 50%;
+                left: 25%;
+                top: 25% !important;
+                font-size: 128px;
+                border-radius: 0px;
+                border-width: 24px;
+                border-color: rgb(20, 20, 20);
+                background-color: gray;
+
+            }
+        </style>
+        <script>
+            function rickrollEm(){
+                document.getElementById('title').innerText = 'oh';
+                document.getElementById('rickroll').style.visibility = 'visible';
+                document.getElementById('butt').style.visibility = 'hidden';
+                new Audio('rickroll.mp3').play();
+                setTimeout(() => {
+                    document.getElementById('title').innerText = 'Welp, goodbye!';
+                    console.log(document.referrer);
+                    if(document.referrer == 'https://thegamer221148.github.io/kneesurgery/'){
+                        window.location.replace('https://evansvetina.github.io/CSSEproj1/')
+                    }else{
+                        window.location.replace('https://thegamer221148.github.io/kneesurgery/');
+                    }
+                }, 7000);
+            }
+        </script>
+    </head>
+    <body>
+        <button id="butt" onclick="rickrollEm()">CLICK ME</button>
+        <img src="rick-roll.gif" id="rickroll">
+    </body>
+</html>
